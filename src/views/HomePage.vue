@@ -1,4 +1,13 @@
 <script setup>
+import { onMounted, ref } from 'vue'
+import useAPI from '@/composables/useAPI'
+
+const api = useAPI()
+const categories = ref([])
+
+onMounted(async () => {
+  categories.value = await api.getCategories()
+})
 </script>
 
 <template>
@@ -8,8 +17,10 @@
     <img class="logo" src="logo.svg" alt="logo" />
   </div>
   <div class="categories">
-    <RouterLink v-for="n in 24" :key="n" :to="`/question/category/${n}`" class="category">Category</RouterLink>
+    <RouterLink v-for="category in categories" :key="category.id" :to="`/question/category/${category.id}`" 
+      class="category">{{ category.name }}</RouterLink>
   </div>
+  
 </template>
 
 <style lang="postcss" scoped>
