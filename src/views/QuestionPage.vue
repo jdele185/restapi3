@@ -5,7 +5,7 @@ import { shuffle } from 'lodash-es'
 
 import NotifyAnswer from '@/components/NotifyAnswer.vue'
 
-import useAPI from '@/composables/useAPI'
+import useAPI from '@/composables/useApi'
 import useColor from '@/composables/useColor'
 import useScore from '@/composables/useScore'
 import BaseTitle from '@/components/BaseTitle.vue'
