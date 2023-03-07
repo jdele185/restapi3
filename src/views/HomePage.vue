@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import useAPI from '@/composables/useAPI'
 import BaseTitle from '@/components/BaseTitle.vue'
 
