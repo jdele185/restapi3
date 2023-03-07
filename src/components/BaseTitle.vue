@@ -11,6 +11,7 @@
 <style lang="postcss" scoped>
 .brand {
   @apply flex items-center justify-center gap-4;
+  
   & :slotted(img) {
     @apply h-16 w-16;
   }
