@@ -1,8 +1,7 @@
-import axios from 'axios';
+import axios from 'axios'
 import { ref } from 'vue'
 const instance = axios.create({
-    baseURL: 'https://opentdb.com/',
-    
+    baseURL: 'https://opentdb.com/',    
 })
 
 const categories = ref([])
